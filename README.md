@@ -7,28 +7,28 @@
 
 ## Project Objectives:
 
-Имплементация готовой модели обучения без учителя для сентиментального анализа текстовых данных отзывов на смартфоны. Разделение комментариев на два лагеря, положительные комментарии и отрицательные комментарии. Анализ эффективности модели.
+Implementation of an unsupervised learning model for sentiment analysis of textual data reviews on smartphones. Separation of comments into two categories, positive comments and negative comments. Analysis of the model's effectiveness.
 
-## Этапы: 
+## Stages: 
 
-1. Обработка текста. Удаление стоп слов, наименований моделей смартфонов и лемматизация текста.
-2. Токенизация, создание семантического словаря.
-3. Разделение данных на группы используя К-средних.
-4. Умножение значений кластеров на семантические значения и добавление результата к соответствующему слову.
-5. Создание TF-IDF словаря.
-6. Замена всех слов в датасете на TF-IDF значения.
-7. Перемножение TF-IDF значений и сентиментальных кластеров.
-8. Получение результата.
+1. Text processing. Removal of stop words, smartphone model names, and text lemmatization.
+2. Tokenization, creation of a semantic dictionary.
+3. Data segmentation into groups using K-means.
+4. Multiplication of cluster values by semantic values and addition of the result to the corresponding word.
+5. Creation of a TF-IDF dictionary.
+6. Replacement of all words in the dataset with TF-IDF values.
+7. Multiplication of TF-IDF values and sentiment clusters.
+8. Obtaining the result.
 
 ## Research Conclusion:
 
-Отталкиваясь от ручной проверки результата можно сказать, что алгоритм работает достаточно слабо, несмотря на то, что был развернут на большом массиве данных. Основная причина такого результата это пецифика русского языка, положительные слова могут встречаться очень часто в предложениях имеющих отрицательный тон и наоборот. Об этом может говорить определение ключевых слов которые характеризуют отрицательный тон, в набор таких слов входят следующие слова: "понравиться", "нравиться", "отличный". В таком случае эффективнее всего было бы использование алгоритма обучения с учителем. Ниже приведен wordcloud слов в отрицательных комментариях.
+Based on the manual verification of the results, it can be said that the algorithm performs poorly despite being deployed on a large dataset. The main reason for this outcome is the specificity of the Russian language, where positive words can often appear in sentences with a negative tone and vice versa. This is indicated by the identification of key words characterizing a negative tone, including words like "liked", "enjoyed", "excellent." In such cases, it would be more effective to use a supervised learning algorithm. Below is a word cloud of words in negative comments.
 
 <img src="https://i.imgur.com/TovFCLn.png" alt="NLP"/>
 
 ## Technical Features of the Project:
 
-Очень медленная производительность вызванная построчной обработкой датафрейма вогнала много палок в колеса, уменьшение датафрейма уменьшало качество результата, поэтому оценка разных алгоритмов машинного обучения для разделения данных на кластеры вызывала затруднения, но как факт результат работы не улучшала.
+The slow performance caused by row-by-row dataframe processing led to many obstacles, reducing the dataframe reduced the quality of the results, so the evaluation of different machine learning algorithms for clustering data caused difficulties, but the fact remains that the result of the work did not improve.
 
 ## Project Tools
 
