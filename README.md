@@ -1,4 +1,4 @@
-# Unsupervised Sentiment Analisys of Smartphone Reviews
+# Unsupervised Sentiment Analisys of Smartphone Reviews (NLP)
 
 
 
