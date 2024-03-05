@@ -36,6 +36,6 @@ The slow performance caused by row-by-row dataframe processing led to many obsta
 - Pandas
 - Numpy
 - Spacy
-- matplotlib.pyplot
-- sklearn
-- Word2Vec
+- Matplotlib.pyplot
+- Sklearn
+- Gensim.Word2Vec
